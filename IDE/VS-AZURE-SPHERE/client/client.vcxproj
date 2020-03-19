@@ -62,13 +62,13 @@
     <Link>
       <LibraryDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">applibs;pthread;gcc_s;c;wolfssl</LibraryDependencies>
       <ShowProgress Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ShowProgress>
-      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">$(ProjectDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <CustomBuildStep>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">192.168.35.1</Command>
     </CustomBuildStep>
     <Link>
-      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">$(ProjectDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <LibraryDependencies Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">applibs;pthread;gcc_s;c;wolfssl</LibraryDependencies>
     </Link>
   </ItemDefinitionGroup>

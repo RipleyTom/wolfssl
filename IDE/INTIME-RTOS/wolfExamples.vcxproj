@@ -61,7 +61,7 @@
       <Version>21076.20053</Version>
       <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>rt.lib;pcibus.lib;netlib.lib;clib.lib;vshelper.lib;libwolfssl.lib</AdditionalDependencies>
-      <OutputFile>$(SolutionDir)$(Configuration)\\wolfExamples.rta</OutputFile>
+      <OutputFile>$(ProjectDir)$(Configuration)\\wolfExamples.rta</OutputFile>
       <AdditionalLibraryDirectories>$(ProjectDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ClCompile>
@@ -77,7 +77,7 @@
       <Version>21076.20053</Version>
       <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>rt.lib;pcibus.lib;netlib.lib;clib.lib;vshelper.lib;libwolfssl.lib</AdditionalDependencies>
-      <OutputFile>$(SolutionDir)$(Configuration)\\wolfExamples.rta</OutputFile>
+      <OutputFile>$(ProjectDir)$(Configuration)\\wolfExamples.rta</OutputFile>
       <AdditionalLibraryDirectories>$(ProjectDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ClCompile>

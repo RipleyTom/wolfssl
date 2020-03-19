@@ -6,71 +6,39 @@
 #error This user_settings.h header is only designed for Windows
 #endif
 
-/* Configurations */
-#if defined(HAVE_FIPS)
-    /* FIPS */
-    #define OPENSSL_EXTRA
-    #define HAVE_THREAD_LS
-    #define WOLFSSL_KEY_GEN
-    #define HAVE_AESGCM
-    #define HAVE_HASHDRBG
-    #define WOLFSSL_SHA384
-    #define WOLFSSL_SHA512
-    #define NO_PSK
-    #define NO_HC128
-    #define NO_RC4
-    #define NO_RABBIT
-    #define NO_DSA
-    #define NO_MD4
-
-    #define GCM_NONCE_MID_SZ 12
-#else
-    /* Enables blinding mode, to prevent timing attacks */
-    #define WC_RSA_BLINDING
-    #define NO_MULTIBYTE_PRINT
-
-    #if defined(WOLFSSL_LIB)
-        /* The lib */
-        #define OPENSSL_EXTRA
-        #define WOLFSSL_RIPEMD
-        #define WOLFSSL_SHA512
-        #define NO_PSK
-        #define HAVE_EXTENDED_MASTER
-        #define WOLFSSL_SNIFFER
-        #define HAVE_TLS_EXTENSIONS
-        #define HAVE_SECURE_RENEGOTIATION
-
-        #define HAVE_AESGCM
-        #define WOLFSSL_SHA384
-        #define WOLFSSL_SHA512
-
-        #define HAVE_SUPPORTED_CURVES
-        #define HAVE_TLS_EXTENSIONS
-
-        #define HAVE_ECC
-        #define ECC_SHAMIR
-        #define ECC_TIMING_RESISTANT
-
-        /* Optional Performance Speedups */
-        #if 0
-            /* AESNI on x64 */
-            #ifdef _WIN64
-                #define HAVE_INTEL_RDSEED
-                #define WOLFSSL_AESNI
-            #endif
-
-            /* Single Precision Support for RSA/DH 1024/2048/3072 and ECC P-256 */
-            #define WOLFSSL_SP
-            #define WOLFSSL_HAVE_SP_ECC
-            #define WOLFSSL_HAVE_SP_DH
-            #define WOLFSSL_HAVE_SP_RSA
-        #endif
-
-    #else
-        /* The servers and clients */
-        #define OPENSSL_EXTRA
-        #define NO_PSK
-    #endif
-#endif /* HAVE_FIPS */
+#define HAVE_FFDHE_2048
+#define TFM_TIMING_RESISTANT
+#define ECC_TIMING_RESISTANT
+#define WC_RSA_BLINDING
+#define HAVE_AESGCM
+#define WOLFSSL_SHA512
+#define WOLFSSL_SHA384
+#define NO_DSA
+#define HAVE_ECC
+#define TFM_ECC256
+#define ECC_SHAMIR
+#define NO_RC4
+#define NO_HC128
+#define NO_RABBIT
+#define WOLFSSL_SHA224
+#define WOLFSSL_SHA3
+#define WOLFSSL_SHAKE256
+#define HAVE_POLY1305
+#define HAVE_ONE_TIME_AUTH
+#define HAVE_CHACHA
+#define HAVE_HASHDRBG
+#define HAVE_TLS_EXTENSIONS
+#define HAVE_SNI
+#define HAVE_SUPPORTED_CURVES
+#define HAVE_EXTENDED_MASTER
+#define NO_RC4
+#define HAVE_ENCRYPT_THEN_MAC
+#define NO_PSK
+#define NO_MD4
+#define NO_PWDBASED
+#define WC_NO_ASYNC_THREADING
+#define NO_DES3
+#define DEBUG_WOLFSSL
+#define WOLFSSL_SMALL_CERT_VERIFY
 
 #endif /* _WIN_USER_SETTINGS_H_ */

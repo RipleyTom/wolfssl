@@ -72,8 +72,8 @@
 
 
     /* try to set SIZEOF_LONG or SIZEOF_LONG_LONG if user didn't */
-    #if defined(_MSC_VER) || defined(HAVE_LIMITS_H)
-        #if !defined(SIZEOF_LONG_LONG) && !defined(SIZEOF_LONG)
+    #if defined(_MSC_VER)
+        #if !defined(SIZEOF_LONG_LONG) || !defined(SIZEOF_LONG)
             #include <limits.h>
             #if defined(ULONG_MAX) && (ULONG_MAX == 0xffffffffUL)
                 #define SIZEOF_LONG 4

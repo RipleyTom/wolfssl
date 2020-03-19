@@ -186,7 +186,7 @@
       <Version>21076.20052</Version>
       <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>rt.lib;pcibus.lib;netlib.lib;clib.lib;vshelper.lib</AdditionalDependencies>
-      <OutputFile>$(SolutionDir)$(Configuration)\\libwolfssl.rsl</OutputFile>
+      <OutputFile>$(ProjectDir)$(Configuration)\\libwolfssl.rsl</OutputFile>
     </Link>
     <ClCompile>
       <ExceptionHandling>Async</ExceptionHandling>
@@ -201,7 +201,7 @@
       <Version>21076.20052</Version>
       <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
       <AdditionalDependencies>rt.lib;pcibus.lib;netlib.lib;clib.lib;vshelper.lib</AdditionalDependencies>
-      <OutputFile>$(SolutionDir)$(Configuration)\\libwolfssl.rsl</OutputFile>
+      <OutputFile>$(ProjectDir)$(Configuration)\\libwolfssl.rsl</OutputFile>
     </Link>
     <ClCompile>
       <ExceptionHandling>Async</ExceptionHandling>
