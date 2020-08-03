@@ -35,10 +35,11 @@
 #define HAVE_ENCRYPT_THEN_MAC
 #define NO_PSK
 #define NO_MD4
-#define NO_PWDBASED
 #define WC_NO_ASYNC_THREADING
 #define NO_DES3
 #define DEBUG_WOLFSSL
 #define WOLFSSL_SMALL_CERT_VERIFY
+#define OPENSSL_EXTRA
+#define WOLFSSL_EVP_INCLUDED
 
 #endif /* _WIN_USER_SETTINGS_H_ */
